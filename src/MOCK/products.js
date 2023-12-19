@@ -1,0 +1,77 @@
+export const MOCK_DATA = [
+  {
+    id: 1,
+    name: "Pizza napolitana (8 porciones)",
+    description:
+      "Pizza de 8 porciones con mozzarella y rodajas de tomate. Masa al molde",
+    price: 9000,
+    img: "product1.webp",
+    category: "pizzas",
+  },
+  {
+    id: 2,
+    name: "Pizza muzarrella (8 porciones)",
+    description:
+      "Pizza de 8 porciones con mozzarella y salsa de tomate. Masa al molde",
+    price: 7500,
+    img: "product2.webp",
+    category: "pizzas",
+  },
+  {
+    id: 3,
+    name: "Pizza con jamón y morrón (8 porciones)",
+    description:
+      "Pizza de 8 porciones con mozzarella, jamón cocido y morrones. Masa al molde",
+    price: 9900,
+    img: "product3.webp",
+    category: "pizzas",
+  },
+  {
+    id: 4,
+    name: "Empanada de carne picada",
+    description: "Al horno",
+    price: 1100,
+    img: "product4.webp",
+    category: "empanadas",
+  },
+  {
+    id: 5,
+    name: "Empanada de jamón y queso",
+    description: "Al horno",
+    price: 1100,
+    img: "product5.webp",
+    category: "empanadas",
+  },
+  {
+    id: 6,
+    name: "Empanada de pollo",
+    description: "Al horno",
+    price: 1100,
+    img: "product6.webp",
+    category: "empanadas",
+  },
+  {
+    id: 7,
+    name: "Agua saborizada Levite de Pomelo 1.5 L",
+    description: "",
+    price: 3000,
+    img: "product7.webp",
+    category: "bebidas",
+  },
+  {
+    id: 8,
+    name: "Agua saborizada Levite de Naranja 1.5 L",
+    description: "",
+    price: 3000,
+    img: "product8.webp",
+    category: "bebidas",
+  },
+  {
+    id: 9,
+    name: "Agua saborizada Levite de Naranja 500 ML",
+    description: "",
+    price: 1650,
+    img: "product8.webp",
+    category: "bebidas",
+  },
+];

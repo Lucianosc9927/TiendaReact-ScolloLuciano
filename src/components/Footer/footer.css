@@ -1,0 +1,29 @@
+.footer {
+  background-color: #222;
+  padding: 1rem;
+
+  .icons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+    .icon {
+      color: rgb(197, 144, 45);
+      font-size: 1.4rem;
+  
+      &:hover {
+        color: #E2CCB3;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .copy {
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+}

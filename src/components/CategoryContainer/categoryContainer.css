@@ -1,0 +1,22 @@
+.categoryNavbar {
+  background-color: #E2CCB3;
+  padding: 2rem;
+  border-radius: 10px;
+  height: 100%;
+
+  .categoryNavbarItems {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .link a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
