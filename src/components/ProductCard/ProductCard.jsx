@@ -1,4 +1,6 @@
 import "./productCard.css";
+import { IoIosAdd } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {
   return (
@@ -11,6 +13,9 @@ export const ProductCard = ({ product }) => {
         </p>
       </div>
       <img className="img" src={`/public/${product.img}`} alt="" />
+      <Link to={`/item/${product.id}`}>
+        <IoIosAdd className="addIcon" />
+      </Link>
     </div>
   );
 };

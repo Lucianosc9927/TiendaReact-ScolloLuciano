@@ -1,0 +1,6 @@
+.productContainer {
+  height: 80vh;
+  background-color: #EBE7E4;
+  display: grid;
+  place-content: center;
+}

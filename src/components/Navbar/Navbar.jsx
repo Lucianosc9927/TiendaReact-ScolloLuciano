@@ -1,5 +1,5 @@
 import { NavbarItem } from "./NavbarItem";
-import { IoMdHome, IoIosPhonePortrait } from "react-icons/io";
+import { IoMdHome, IoIosPhonePortrait, IoIosCart } from "react-icons/io";
 import { FaMotorcycle } from "react-icons/fa";
 
 import logo from "../../assets/logo.png";
@@ -20,8 +20,8 @@ export const Navbar = () => {
           <FaMotorcycle className="icon" />
         </NavbarItem>
 
-        <NavbarItem name="Contacto" path="/contacto">
-          <IoIosPhonePortrait className="icon" />
+        <NavbarItem name="Carrito" path="/carrito">
+          <IoIosCart className="icon" />
         </NavbarItem>
       </ul>
     </nav>
