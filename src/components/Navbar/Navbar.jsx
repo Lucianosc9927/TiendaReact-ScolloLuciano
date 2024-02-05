@@ -1,10 +1,11 @@
 import { NavbarItem } from "./NavbarItem";
-import { IoMdHome, IoIosPhonePortrait, IoIosCart } from "react-icons/io";
-import { FaMotorcycle } from "react-icons/fa";
+import { IoMdHome } from "react-icons/io";
+import { MdOutlineMenuBook } from "react-icons/md";
 
 import logo from "../../assets/logo.png";
 
 import "./navbar.css";
+import { CartWidget } from "./CartWidget";
 
 export const Navbar = () => {
   return (
@@ -16,12 +17,12 @@ export const Navbar = () => {
           <IoMdHome className="icon" />
         </NavbarItem>
 
-        <NavbarItem name="Pedidos" path="/shop">
-          <FaMotorcycle className="icon" />
+        <NavbarItem name="Catalogo" path="/shop">
+          <MdOutlineMenuBook className="icon" />
         </NavbarItem>
 
-        <NavbarItem name="Carrito" path="/carrito">
-          <IoIosCart className="icon" />
+        <NavbarItem name="Carrito" path="/cart">
+          <CartWidget />
         </NavbarItem>
       </ul>
     </nav>

@@ -7,6 +7,7 @@ export const MOCK_DATA = [
     price: 9000,
     img: "product1.webp",
     category: "pizzas",
+    stock: 10,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const MOCK_DATA = [
     price: 7500,
     img: "product2.webp",
     category: "pizzas",
+    stock: 10,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const MOCK_DATA = [
     price: 9900,
     img: "product3.webp",
     category: "pizzas",
+    stock: 10,
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ export const MOCK_DATA = [
     price: 1100,
     img: "product4.webp",
     category: "empanadas",
+    stock: 10,
   },
   {
     id: 5,
@@ -41,6 +45,7 @@ export const MOCK_DATA = [
     price: 1100,
     img: "product5.webp",
     category: "empanadas",
+    stock: 10,
   },
   {
     id: 6,
@@ -49,6 +54,7 @@ export const MOCK_DATA = [
     price: 1100,
     img: "product6.webp",
     category: "empanadas",
+    stock: 10,
   },
   {
     id: 7,
@@ -57,6 +63,7 @@ export const MOCK_DATA = [
     price: 3000,
     img: "product7.webp",
     category: "bebidas",
+    stock: 10,
   },
   {
     id: 8,
@@ -65,6 +72,7 @@ export const MOCK_DATA = [
     price: 3000,
     img: "product8.webp",
     category: "bebidas",
+    stock: 10,
   },
   {
     id: 9,
@@ -73,5 +81,6 @@ export const MOCK_DATA = [
     price: 1650,
     img: "product8.webp",
     category: "bebidas",
+    stock: 10,
   },
 ];
