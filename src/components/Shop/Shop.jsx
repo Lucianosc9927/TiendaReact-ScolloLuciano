@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { ProductCard } from "./../ProductCard/ProductCard";
 import { CategoryContainer } from "../CategoryContainer/CategoryContainer";
-import { pedirDatos } from "../../utils/pedirDatos";
-import "./shop.css";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import "./shop.css";
 
 export const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -13,13 +14,19 @@ export const Shop = () => {
 
   useEffect(() => {
     setLoading(true);
-    pedirDatos().then((data) => {
-      const items = categoryId
-        ? data.filter((item) => item.category === categoryId)
-        : data;
-      setProducts(items);
-      setLoading(false);
-    });
+
+    const productosRef = collection(db, "productos");
+    const q = categoryId
+      ? query(productosRef, where("category", "==", categoryId))
+      : productosRef;
+
+    getDocs(q)
+      .then((res) => {
+        const docs = res.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+
+        setProducts(docs);
+      })
+      .finally(() => setLoading(false));
   }, [categoryId]);
 
   return (

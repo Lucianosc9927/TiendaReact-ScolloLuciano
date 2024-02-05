@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { ProductDetail } from "../ProductDetail/ProductDetail";
 import { useParams } from "react-router-dom";
-import { pedirDatos } from "../../utils/pedirDatos";
+import { db } from "../../firebase/config";
+import { doc, getDoc } from "firebase/firestore";
 import "./productDetailContainer.css";
 
 export const ProductDetailContainer = () => {
@@ -12,9 +13,16 @@ export const ProductDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    pedirDatos()
-      .then((data) => {
-        setItem(data.find((prod) => prod.id === Number(itemId)));
+    const docRef = doc(db, "productos", itemId);
+
+    getDoc(docRef)
+      .then((res) => {
+        const doc = {
+          ...res.data(),
+          id: res.id,
+        };
+
+        setItem(doc);
       })
       .finally(() => setLoading(false));
   }, []);
