@@ -8,10 +8,14 @@ export const ItemCounter = ({ cantidad, stock, setCantidad }) => {
   };
 
   return (
-    <div>
-      <button onClick={handleRestar}>-</button>
+    <div className="selectContainer">
+      <button className="btnCounter" onClick={handleRestar}>
+        -
+      </button>
       <span>{cantidad}</span>
-      <button onClick={handleSumar}>+</button>
+      <button className="btnCounter" onClick={handleSumar}>
+        +
+      </button>
     </div>
   );
 };

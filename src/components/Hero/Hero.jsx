@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 import "./hero.css";
 
@@ -17,7 +18,9 @@ export const Hero = () => {
           <a className="link">contactanos</a>.
         </p>
       </div>
-      <Button value="Pedir ahora" />
+      <Link to="/shop">
+        <Button value="Pedir ahora" />
+      </Link>
     </section>
   );
 };

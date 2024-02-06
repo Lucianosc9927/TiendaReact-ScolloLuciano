@@ -26,6 +26,9 @@ export const ProductDetail = ({ item }) => {
         <p>{item.name}</p>
         <p>{item.description}</p>
         <p>{item.price}</p>
+        {item.stock <= 10 && (
+          <p className="alert">Quedan solo {item.stock} unidades!</p>
+        )}
       </div>
       {searchInCart(item.id) ? (
         <Link to="/cart">Ir al carrito</Link>

@@ -1,23 +1,31 @@
 import { useContext } from "react";
 import { Cart } from "../../context/Cart";
+import "./CartView.css";
 
 export const CartView = () => {
   const { cart, totalPrice, clearCart, deleteItem } = useContext(Cart);
 
   return (
-    <>
-      <ol>
+    <section className="cartView">
+      <ul>
         {cart.map((item) => (
           <li key={item.id}>
-            <h2>{item.title}</h2>
-            <p>{item.price}</p>
-            <p>{item.cantidad}</p>
-            <button onClick={() => deleteItem(item.id)}>Borrar producto</button>
+            <div className="productInfo">
+              <img src={item.img} alt={item.description} />
+              <h2>{item.title}</h2>
+              <p className="price">${item.price}</p>
+              <p>Cantidad: {item.cantidad}</p>
+            </div>
+            <button className="deleteItem" onClick={() => deleteItem(item.id)}>
+              Borrar producto
+            </button>
           </li>
         ))}
-      </ol>
-      <h3>{totalPrice()}</h3>
-      <button onClick={clearCart}>Vaciar carrito</button>
-    </>
+      </ul>
+      <h3>TOTAL:{totalPrice()}</h3>
+      <button className="btnRemove" onClick={clearCart}>
+        Vaciar carrito
+      </button>
+    </section>
   );
 };
