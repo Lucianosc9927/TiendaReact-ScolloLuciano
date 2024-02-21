@@ -1,0 +1,31 @@
+.formContainer {
+  padding: 2rem;
+  min-height: 80vh;
+
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    input {
+      font-size: 1.5rem;
+      padding: .8rem;
+    }
+    
+    button {
+      border: none;
+      font-size: 2rem;
+      padding: 2rem;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

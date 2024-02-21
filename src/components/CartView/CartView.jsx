@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Cart } from "../../context/Cart";
 import "./CartView.css";
+import { Link } from "react-router-dom";
 
 export const CartView = () => {
   const { cart, totalPrice, clearCart, deleteItem } = useContext(Cart);
@@ -25,6 +26,9 @@ export const CartView = () => {
       <h3>TOTAL:{totalPrice()}</h3>
       <button className="btnRemove" onClick={clearCart}>
         Vaciar carrito
+      </button>
+      <button className="btnFinish" onClick={() => deleteItem(item.id)}>
+        <Link to="/checkout">Terminar mi compra</Link>
       </button>
     </section>
   );
